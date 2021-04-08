@@ -1,4 +1,4 @@
-# Entity Relational Diagram 
+# Entity Relationship Diagram 
 
 ![ERD](ERD.png)
 
