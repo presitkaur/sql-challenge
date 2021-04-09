@@ -49,3 +49,4 @@ CREATE TABLE titles(
     title VARCHAR NOT NULL,
     PRIMARY KEY (title_id)
 );
+
