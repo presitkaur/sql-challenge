@@ -2,8 +2,7 @@
 CREATE TABLE departments (
     dept_no VARCHAR NOT NULL,
     dept_name VARCHAR NOT NULL,
-    PRIMARY KEY (dept_no),
-    FOREIGN KEY (dept_no) REFERENCES dept_manager(dept_no)
+    PRIMARY KEY (dept_no)
 );
 
 
@@ -11,16 +10,14 @@ CREATE TABLE departments (
 CREATE TABLE dept_emp (
     emp_no INT NOT NULL,
     dept_no VARCHAR NOT NULL, 
-    PRIMARY KEY (emp_no),
-    FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
+    PRIMARY KEY (emp_no)
 );
 
 ---Table for the "dept_manager.csv" file 
 CREATE TABLE dept_manager (
     dept_no VARCHAR NOT NULL, 
     emp_no VARCHAR NOT NULL,
-    PRIMARY KEY (emp_no),
-    FOREIGN KEY (dept_no) REFERENCES deptartments(dept_no) 
+    PRIMARY KEY (emp_no)
 );
 
 --Table for the "employees.csv" file 
@@ -32,8 +29,7 @@ CREATE TABLE employees(
     last_name VARCHAR NOT NULL,
     sex VARCHAR NOT NULL,
     hire_date DATE NOT NULL,
-    PRIMARY KEY (emp_no),
-    FOREIGN KEY (emp_title_id) REFERENCES titles(title_id) 
+    PRIMARY KEY (emp_no)
 );
 
 --Table for the "salaries.csv" file
