@@ -35,7 +35,7 @@ CREATE TABLE employees(
 --Table for the "salaries.csv" file
 CREATE TABLE salaries(
     emp_no VARCHAR NOT NULL,
-    salry INT NOT NULL,
+    salary INT NOT NULL,
     PRIMARY KEY (emp_no)
 );
 
@@ -45,4 +45,9 @@ CREATE TABLE titles(
     title VARCHAR NOT NULL,
     PRIMARY KEY (title_id)
 );
+
+ALTER TABLE departments ADD CONSTRAINT fk_dept_no FOREIGN KEY(dept_no) REFERENCES REFERENCES dept_manager(dept_no);
+ALTER TABLE dept_emp ADD CONSTRAINT fk_dept_no FOREIGN KEY(dept_no) REFERENCES departments(dept_no);
+ALTER TABLE dept_manager ADD CONSTRAINT fk_dept_no FOREIGN KEY (dept_no) REFERENCES departments(dept_no);
+ALTER TABLE employees ADD CONSTRAINT fk_emp_title_id REFERENCES titles(title_id;)
 
