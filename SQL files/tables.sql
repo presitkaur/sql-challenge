@@ -44,8 +44,6 @@ CREATE TABLE titles(
     PRIMARY KEY (title_id)
 );
 
-ALTER TABLE departments ADD CONSTRAINT fk_dept_no FOREIGN KEY(dept_no) REFERENCES REFERENCES dept_manager(dept_no);
-ALTER TABLE dept_emp ADD CONSTRAINT fk_dept_no FOREIGN KEY(dept_no) REFERENCES departments(dept_no);
 ALTER TABLE dept_emp ADD CONSTRAINT fk_emp_no FOREIGN KEY(emp_no) REFERENCES departments(emp_no);
 ALTER TABLE dept_manager ADD CONSTRAINT fk_dept_no FOREIGN KEY (dept_no) REFERENCES departments(dept_no);
 ALTER TABLE employees ADD CONSTRAINT fk_emp_no FOREIGN KEY(emp_no) REFERENCES salaries(emp_no);
