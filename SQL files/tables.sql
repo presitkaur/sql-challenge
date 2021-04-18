@@ -27,7 +27,7 @@ CREATE TABLE employees(
     first_name VARCHAR NOT NULL,
     last_name VARCHAR NOT NULL,
     sex VARCHAR NOT NULL,
-    hire_date DATE NOT NULL
+    hire_date VARCHAR NOT NULL
 );
 
 --Table for the "salaries.csv" file
