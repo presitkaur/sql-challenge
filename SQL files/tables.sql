@@ -9,8 +9,7 @@ CREATE TABLE departments (
 -- Table for the "dept_emp.csv" file 
 CREATE TABLE dept_emp (
     emp_no INT NOT NULL,
-    dept_no VARCHAR NOT NULL, 
-    PRIMARY KEY (emp_no)
+    dept_no VARCHAR NOT NULL
 );
 
 ---Table for the "dept_manager.csv" file 
@@ -24,12 +23,11 @@ CREATE TABLE dept_manager (
 CREATE TABLE employees(
     emp_no INT NOT NULL,
     emp_title_id VARCHAR NOT NULL,
-    firth_date DATE NOT NULL, 
+    birth_date VARCHAR NOT NULL, 
     first_name VARCHAR NOT NULL,
     last_name VARCHAR NOT NULL,
     sex VARCHAR NOT NULL,
-    hire_date DATE NOT NULL,
-    PRIMARY KEY (emp_no)
+    hire_date DATE NOT NULL
 );
 
 --Table for the "salaries.csv" file
@@ -48,6 +46,8 @@ CREATE TABLE titles(
 
 ALTER TABLE departments ADD CONSTRAINT fk_dept_no FOREIGN KEY(dept_no) REFERENCES REFERENCES dept_manager(dept_no);
 ALTER TABLE dept_emp ADD CONSTRAINT fk_dept_no FOREIGN KEY(dept_no) REFERENCES departments(dept_no);
+ALTER TABLE dept_emp ADD CONSTRAINT fk_emp_no FOREIGN KEY(emp_no) REFERENCES departments(emp_no);
 ALTER TABLE dept_manager ADD CONSTRAINT fk_dept_no FOREIGN KEY (dept_no) REFERENCES departments(dept_no);
+ALTER TABLE employees ADD CONSTRAINT fk_emp_no FOREIGN KEY(emp_no) REFERENCES salaries(emp_no);
 ALTER TABLE employees ADD CONSTRAINT fk_emp_title_id REFERENCES titles(title_id;)
 
